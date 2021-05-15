@@ -1,70 +1,63 @@
-html {
-    box-sizing: border-box;
-}
-
-*,
-::after,
-::before {
-    box-sizing: inherit;
-}
-
-.body {
-    font-family     : 'Lato', sans-serif;
-    background-color: #fff;
-    width           : auto;
-    max-width       : 1000px;
-    padding         : 10px;
-
-}
-
-.form {
-    max-width       : 700px;
-    margin          : auto;
-    text-align      : center;
-    border          : 1px dotted teal;
-    border-radius   : 5px;
-    background-color: hsl(180, 58%, 98%);
-}
-
-.form__legend {
-    border          : 1px solid teal;
-    border-radius   : 5px;
-    background-color: hsl(180, 58%, 98%);
-    padding         : 5px;
-    color           : teal;
-    font-weight     : 700;
-    text-align      : left;
-
-}
-
-.form__fieldset {
-    background-color: rgb(217, 245, 245);
-    border          : 1px solid teal;
-    margin          : 20px auto;
-    border-radius   : 5px;
-    max-width       : 400px;
-}
-
-.form__button {
-
-    padding         : 10px;
-    border          : 1px solid teal;
-    border-radius   : 5px;
-    background-color: rgb(217, 245, 245);
-    max-width       : 400px;
-    margin          : 20px auto;
-}
-
-.form__result {
-    background-color: rgb(157, 209, 209);
-    color           : black;
-    padding         : 20px 10px;
-    font-weight     : 900;
-    border-radius   : 5px;
-    max-width       : 400px;
-    text-align      : center;
-    margin          : auto;
-}
-
-.form__button:hover {
-    background-color: hsl(180, 58%, 96%);
+        html {
+        box-sizing: border-box;
+    }
+    
+    *,
+    ::after,
+    ::before {
+        box-sizing: inherit;
+    }
+    
+    .body {
+        font-family: 'Lato', sans-serif;
+        background-color: #fff;
+        width: auto;
+        padding: 10px;
+    }
+    
+    .form {
+        max-width: 700px;
+        margin: auto;
+        text-align: center;
+    }
+    
+    .form__legend {
+        border: 1px solid teal;
+        border-radius: 5px;
+        background-color: hsl(180, 58%, 98%);
+        padding: 5px;
+        color: teal;
+        font-weight: 700;
+        text-align: left;
+    }
+    
+    .form__fieldset {
+        background-color: rgb(217, 245, 245);
+        border: 1px solid teal;
+        margin: 20px auto;
+        border-radius: 5px;
+        max-width: 400px;
+    }
+    
+    .form__button {
+        padding: 10px;
+        border: 1px solid teal;
+        border-radius: 5px;
+        background-color: rgb(217, 245, 245);
+        max-width: 400px;
+        margin: 20px auto;
+    }
+    
+    .form__result {
+        background-color: rgb(157, 209, 209);
+        color: black;
+        padding: 20px 10px;
+        font-weight: 900;
+        border-radius: 5px;
+        max-width: 400px;
+        text-align: center;
+        margin: auto;
+    }
+    
+    .form__button:hover {
+        background-color: hsl(180, 58%, 96%);
