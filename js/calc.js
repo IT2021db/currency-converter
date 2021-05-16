@@ -7,7 +7,7 @@ let exchangeRate = document.querySelector(".js-exchangeRate");
 let resultElement = document.querySelector(".js-result");
 
 
-formElement.addEventListener("input", () => {
+formElement.addEventListener("input", (event) => {
     let currency = currencySelectElement.value;
 
     let euro = 4.5316;
@@ -34,5 +34,6 @@ formElement.addEventListener("input", () => {
 
 
 formElement.addEventListener("reset", () => {
-
+    exchangeRate.innerText = "";
+    resultElement.innerText = "";
 });
