@@ -1,39 +1,43 @@
 console.log("Hello!");
-let formElement = document.querySelector(".js-form");
-let plnElement = document.querySelector(".js-pln");
-let currencySelectElement = document.querySelector(".js-currencySelect");
+{
+    let formElement = document.querySelector(".js-form");
+    let amountElement = document.querySelector(".js-amount");
+    let currencySelectElement = document.querySelector(".js-currencySelect");
 
-let exchangeRate = document.querySelector(".js-exchangeRate");
-let resultElement = document.querySelector(".js-result");
+    let exchangeRateElement = document.querySelector(".js-exchangeRate");
+    let resultElement = document.querySelector(".js-result");
+
+    let rateEUR = 4.5316;
+    let rateUSD = 3.7374;
+    let rateGBP = 5.2571;
+    let exchangeRate;
+    let result;
+
+    formElement.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        let currency = currencySelectElement.value;
+
+        switch (currency) {
+            case "EURO":
+                exchangeRate = rateEUR;
+                break
+            case "USD":
+                exchangeRate = rateUSD;
+                break;
+            case "GBP":
+                exchangeRate = rateGBP;
+                break;
+        }
+        result = amountElement.value / exchangeRate;
+        exchangeRateElement.innerText = `${exchangeRate} PLN`;
+        resultElement.innerText = `${result.toFixed(2)} ${currency}`;
+    });
 
 
-formElement.addEventListener("input", (event) => {
-    let currency = currencySelectElement.value;
+    formElement.addEventListener("reset", () => {
+        exchangeRateElement.innerText = "";
+        resultElement.innerText = "";
+    });
 
-    let euro = 4.5316;
-    let dollar = 3.7374;
-    let pound = 5.2571;
-
-    switch (currency) {
-        case "EURO":
-            exchangeRate.value = euro;
-            break
-        case "USD":
-            exchangeRate.value = dollar;
-            break;
-        case "GBP":
-            exchangeRate.value = pound;
-            break;
-        default:
-            break;
-    }
-    exchangeRate.innerText = exchangeRate.value;
-    let result = plnElement.value / exchangeRate.value;
-    resultElement.innerText = `${result.toFixed(2)} ${currency}`;
-});
-
-
-formElement.addEventListener("reset", () => {
-    exchangeRate.innerText = "";
-    resultElement.innerText = "";
-});
+}
